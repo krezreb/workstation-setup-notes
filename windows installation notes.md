@@ -1,19 +1,19 @@
 windows 11 pro
 
-enable rdp 
+enable rdp
 
-# disable shitty s0 standby https://www.makeuseof.com/windows-disable-modern-standby/
+# disable s0 standby https://www.makeuseof.com/windows-disable-modern-standby/
 reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t REG_DWORD /d 0
 -> reboot
 
 # in windows features
-disable CIFS 1.0 client
+- disable CIFS 1.0 client
 
 # https://www.helpwire.app/blog/remote-desktop-for-windows-10-home/
 
 
-install
+## install:
 
-chrome
-rustdesk
-libreoffice
+- chrome
+- rustdesk
+- libreoffice

@@ -39,7 +39,7 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# python shit
+# python
 alias pep8_check='pep8   --first .'
 alias pep8_autofix='autopep8 . --recursive --in-place --pep8-passes 2000'
 
@@ -53,7 +53,7 @@ alias pep8_autofix='autopep8 . --recursive --in-place --pep8-passes 2000'
 # alias sshfs-Photos="sshfs jumiserv1-jump:/mnt/8TB/sync_data/jumi/Photos/Photos ~/Photos -f -o cache=yes -o kernel_cache"
 # alias sshfs-jumi2-Julia="sshfs jumi2:/home/julia ~/jumi2_Julia -f -o cache=yes -o kernel_cache"
 
-# git shit
+# git
 alias gitpull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
 alias gadd="git add -p"
 alias gpush="git push"
@@ -62,4 +62,3 @@ alias gstat="git status"
 alias gbr="git branch"
 alias gresethard="git reset --hard"
 function gcomm() { git commit --message "$1"; }
-

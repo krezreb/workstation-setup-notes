@@ -3,7 +3,7 @@
 ```
 apt install tilix ack borgbackup python3-pyfuse3 fuse3 vlc vlc-plugin-samba ack vim direnv python3-pip gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs vmtouch
 apt install gimp krita inkscape zim meld firefox libreoffice evolution nemo gnome-firmware solaar cheese
-# shitcan gnu nano
+# bye bye gnu nano
 apt remove nano
 snap install brave libreoffice sublime-text
 ```
@@ -42,7 +42,7 @@ sup + up to maximize windows -> settings -> keyboard -> view and customize short
 capslock behavior ->  disable caps lock
 compatibility options -> numlock always enters digits as in macos
 
-# auto start shit
+# auto start stuff
 - /usr/bin/syncthing serve --no-browser
 - run_keybase
 
@@ -67,7 +67,7 @@ col layouts:
 ```
 
 
-# alt tab shows icons not fuckin mini windows
+# alt tab shows icons not mini windows
 settings -> keyboard -> view and customize shortcuts -> switch applications = alt-tab
 
 
