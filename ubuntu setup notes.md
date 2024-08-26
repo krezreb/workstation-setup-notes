@@ -2,10 +2,11 @@
 
 ```
 apt install tilix ack borgbackup python3-pyfuse3 fuse3 vlc vlc-plugin-samba ack vim direnv python3-pip gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs vmtouch
-apt install gimp krita inkscape zim meld firefox libreoffice evolution nemo gnome-firmware solaar cheese
+apt install gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese
 # bye bye gnu nano
-apt remove nano
-snap install brave libreoffice sublime-text
+apt remove nano firefox libreoffice
+snap install brave libreoffice firefox
+snap install sublime-text --classic
 ```
 
 # Other 3rd party apps
@@ -20,7 +21,7 @@ snap install brave libreoffice sublime-text
 
 
 # wireguard vpn client setup
-ssh into pi5-bastion, grab conf using
+ssh into pi5-bastion, grab conf using \
 `make get_conf` jumi3 is client number 2
 
 # exfat suport
@@ -35,12 +36,19 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 # pip stuff
 `pip3 install --user azure-cli botocore fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
 
-sup + up to maximize windows -> settings -> keyboard -> view and customize shortcuts -> windows -> maximize window
+# gnome stuff
+- multitasking
+  - fixed number of workspaces
+  - workspaces on all displays
+- ubuntu desktop -> dock
 
+# keyboard stuff
+- **sup + up to maximize windows** -> settings -> keyboard -> view and customize shortcuts -> windows -> maximize window
+- **alt tab shows icons not mini windows:** settings -> keyboard -> view and customize shortcuts -> switch applications = alt-tab
 
-# use gnome-tweaks -> keyboard -> additional layout options
-capslock behavior ->  disable caps lock
-compatibility options -> numlock always enters digits as in macos
+# keyboard stuff in tweaks -> keyboard -> additional layout options
+- capslock behavior ->  disable caps lock
+- compatibility options -> numlock always enters digits as in macos
 
 # auto start stuff
 - /usr/bin/syncthing serve --no-browser
@@ -67,17 +75,6 @@ col layouts:
 ```
 
 
-# alt tab shows icons not mini windows
-settings -> keyboard -> view and customize shortcuts -> switch applications = alt-tab
-
-
-
-# games
-
-tuxtype pingus hedgewars
-
-
-
 # LAPTOP / POWER SAVING NOTES for DELL
 
 # disable default gnome power saving cuz it's garbage
@@ -89,3 +86,7 @@ systemctl mask power-profiles-daemon
 
 # install laptop tools
 `apt install laptop-mode-tools powertop tlp tlp-gui`
+
+# games
+
+tuxtype pingus hedgewars
