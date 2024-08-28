@@ -74,10 +74,17 @@ col layouts:
 0.66--0--0.33--1
 ```
 
+# mainline kernel
 
-# LAPTOP / POWER SAVING NOTES for DELL
+Sometimes you need a more recent kernel for driver support
+https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/
 
-# disable default gnome power saving cuz it's garbage
+# LAPTOP / POWER SAVING NOTES
+
+### tlp + tlpui
+https://github.com/d4nj1/TLPUI/blob/master/docs/INSTALL.md#pypi
+
+### disable default gnome power saving cuz it's garbage
 ```
 systemctl stop power-profiles-daemon
 systemctl disable power-profiles-daemon
