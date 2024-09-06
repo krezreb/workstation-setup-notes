@@ -2,6 +2,11 @@ source /etc/profile.d/vte-2.91.sh
 
 SSH_ENV="$HOME/.ssh/agent-environment"
 
+function restart_agent {
+    killall -9 ssh-agent
+    start_agent
+}
+
 function start_agent {
     echo "Initialising new SSH agent..."
     /usr/bin/ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
