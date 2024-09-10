@@ -1,7 +1,7 @@
 # Basics / common tools
 
 ```
-apt install tilix ack borgbackup python3-pyfuse3 fuse3 vlc vlc-plugin-samba ack vim direnv python3-pip gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs vmtouch
+apt install tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs vmtouch
 apt install gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese
 # bye bye gnu nano
 apt remove nano firefox libreoffice
@@ -20,6 +20,8 @@ snap install sublime-text --classic
 - gitlab cli https://github.com/profclems/glab/releases
 
 
+
+
 # wireguard vpn client setup
 ssh into pi5-bastion, grab conf using \
 `make get_conf` jumi3 is client number 2
@@ -33,8 +35,13 @@ apt install exfat-fuse
 xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 gsettings set org.gnome.desktop.background show-desktop-icons false
 
+# python
+
+`apt install python3-pyfuse3 python3-pip python3-venv`
+
 # pip stuff
 `pip3 install --user azure-cli botocore fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
+
 
 # gnome stuff
 - multitasking
@@ -97,3 +104,33 @@ systemctl mask power-profiles-daemon
 # games
 
 tuxtype pingus hedgewars
+
+
+# vscode python debugger `launch.json` snippet
+
+```
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "current file, no args",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "cwd": "${fileDirname}"
+        },
+        {
+            "name": "current file, with args and cwd",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "args": [
+                "-d",
+                "--dry"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "path/to/dir"
+        },
+        ...
+```
