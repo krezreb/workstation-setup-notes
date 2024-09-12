@@ -1,4 +1,9 @@
-# Basics / common tools
+# Below are instructions for Ubuntu 22 LTS / 24.04 LTS under gnome
+
+- Install `ubuntu-desktop-minimal` meta package to have less cruft (like libreoffice, rythmbox), prefer to install explicitly
+- install HWE kernel for better hardware support `apt install linux-generic-hwe-24.04`
+
+## Basics / common tools
 
 ```
 apt install tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs vmtouch
@@ -9,7 +14,7 @@ snap install brave libreoffice firefox
 snap install sublime-text --classic
 ```
 
-# Other 3rd party apps
+## Other 3rd party apps
 - syncthing https://apt.syncthing.net/
 - keybase
 - code - use github for settings sync
@@ -22,11 +27,11 @@ snap install sublime-text --classic
 
 
 
-# wireguard vpn client setup
+## wireguard vpn client setup
 ssh into pi5-bastion, grab conf using \
 `make get_conf` jumi3 is client number 2
 
-# exfat suport
+## exfat suport
 ```
 add-apt-repository universe
 apt install exfat-fuse
@@ -35,41 +40,39 @@ apt install exfat-fuse
 xdg-mime default nemo.desktop inode/directory application/x-gnome-saved-search
 gsettings set org.gnome.desktop.background show-desktop-icons false
 
-# python
+## python
 
 `apt install python3-pyfuse3 python3-pip python3-venv`
 
-# pip stuff
+## pip stuff
 `pip3 install --user azure-cli botocore fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
 
 
-# gnome stuff
+## gnome stuff
 - multitasking
   - fixed number of workspaces
   - workspaces on all displays
 - ubuntu desktop -> dock
 
-# keyboard stuff
+## keyboard stuff
 - **sup + up to maximize windows** -> settings -> keyboard -> view and customize shortcuts -> windows -> maximize window
 - **alt tab shows icons not mini windows:** settings -> keyboard -> view and customize shortcuts -> switch applications = alt-tab
 
-# keyboard stuff in tweaks -> keyboard -> additional layout options
+## keyboard stuff in tweaks -> keyboard -> additional layout options
 - capslock behavior ->  disable caps lock
 - compatibility options -> numlock always enters digits as in macos
 
-# auto start stuff
+## auto start stuff
 - /usr/bin/syncthing serve --no-browser
 - run_keybase
 
-# docker
-
-# gnome shell extensions
+### gnome shell extensions
 `apt-get install chrome-gnome-shell gnome-shell-extension-prefs`
 
 - https://extensions.gnome.org/extension/906/sound-output-device-chooser/
 - https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
 
-# tiling assistant
+### tiling assistant
 - https://extensions.gnome.org/extension/3733/tiling-assistant/
 
 col layouts:
@@ -81,12 +84,12 @@ col layouts:
 0.66--0--0.33--1
 ```
 
-# mainline kernel
+## mainline kernel
 
 Sometimes you need a more recent kernel for driver support
 https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/
 
-# LAPTOP / POWER SAVING NOTES
+## LAPTOP / POWER SAVING NOTES
 
 ### tlp + tlpui
 https://github.com/d4nj1/TLPUI/blob/master/docs/INSTALL.md#pypi
@@ -98,15 +101,15 @@ systemctl disable power-profiles-daemon
 systemctl mask power-profiles-daemon
 ```
 
-# install laptop tools
+## install laptop tools
 `apt install laptop-mode-tools powertop tlp tlp-gui`
 
-# games
+## games
 
 tuxtype pingus hedgewars
 
 
-# vscode python debugger `launch.json` snippet
+## vscode python debugger `launch.json` snippet
 
 ```
 {
@@ -122,15 +125,15 @@ tuxtype pingus hedgewars
         },
         {
             "name": "current file, with args and cwd",
-            "type": "python",
-            "request": "launch",
-            "program": "${file}",
+            ...
             "args": [
                 "-d",
                 "--dry"
             ],
-            "console": "integratedTerminal",
-            "cwd": "path/to/dir"
-        },
+            ...
+            "cwd": "path/to/dir",
+            # or using a venv
+            "python": "${fileDirname}/venv/bin/python",
+        }
         ...
 ```
