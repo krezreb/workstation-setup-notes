@@ -23,8 +23,8 @@ snap install sublime-text --classic
 - dbeaver
 - zed
 - gitlab cli https://github.com/profclems/glab/releases
-
-
+- obs-studio for screenrecordings https://obsproject.com/download
+- shotcut for video editing
 
 
 ## wireguard vpn client setup
