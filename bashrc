@@ -67,3 +67,6 @@ alias gstat="git status"
 alias gbr="git branch"
 alias gresethard="git reset --hard"
 function gcomm() { git commit --message "$1"; }
+
+# docker-compose
+alias docker-compose="docker compose"
