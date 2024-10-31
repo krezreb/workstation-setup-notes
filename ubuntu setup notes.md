@@ -1,4 +1,4 @@
-# Below are instructions for Ubuntu 22 LTS / 24.04 LTS under gnome
+# Below are instructions for Ubuntu 22 LTS / 24.04 LTS / 24.10 under gnome
 
 - Install `ubuntu-desktop-minimal` meta package to have less cruft (like libreoffice, rythmbox), prefer to install explicitly
 - install HWE kernel for better hardware support `apt install linux-generic-hwe-24.04`
@@ -89,7 +89,7 @@ col layouts:
 Sometimes you need a more recent kernel for driver support
 https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/
 
-## LAPTOP / POWER SAVING NOTES
+# LAPTOP / POWER SAVING NOTES (Ubuntu 24.04 LTS)
 
 ### tlp + tlpui
 https://github.com/d4nj1/TLPUI/blob/master/docs/INSTALL.md#pypi
@@ -103,6 +103,11 @@ systemctl mask power-profiles-daemon
 
 ## install laptop tools
 `apt install laptop-mode-tools powertop tlp tlp-gui`
+
+# LAPTOP / POWER SAVING NOTES (Ubuntu 24.10)
+
+Leave power-profiles-daemon in place, do not use tlp and powertop
+
 
 ## games
 
