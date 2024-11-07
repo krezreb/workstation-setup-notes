@@ -14,6 +14,11 @@ snap install brave libreoffice firefox
 snap install sublime-text --classic
 ```
 
+## remote encrypted git 
+
+https://flolu.de/blog/encrypted-git-repository
+
+
 ## Other 3rd party apps
 - syncthing https://apt.syncthing.net/
 - keybase
