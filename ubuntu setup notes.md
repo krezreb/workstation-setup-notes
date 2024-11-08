@@ -72,13 +72,14 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 - run_keybase
 
 ### gnome shell extensions
-`apt-get install chrome-gnome-shell gnome-shell-extension-prefs`
+`apt-get install gnome-browser-connector gnome-shell-extension-prefs`
 
 - https://extensions.gnome.org/extension/906/sound-output-device-chooser/
 - https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
 
 ### tiling assistant
-- https://extensions.gnome.org/extension/3733/tiling-assistant/
+~~- https://extensions.gnome.org/extension/3733/tiling-assistant/~~ comes with ubuntu out of the box now, but not as good as:
+- https://extensions.gnome.org/extension/7065/tiling-shell/
 
 col layouts:
 
