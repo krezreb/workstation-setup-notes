@@ -63,6 +63,7 @@ alias gitpull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pul
 alias gadd="git add -p"
 alias gpush="git push"
 alias gpull="git pull"
+alias gpull_submodules="git submodule update --recursive --remote"
 alias gstat="git status"
 alias gbr="git branch"
 alias gresethard="git reset --hard"
