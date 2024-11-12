@@ -1,0 +1,7 @@
+[/]
+inner-gaps=uint32 2
+outer-gaps=uint32 2
+selected-layouts=[['Layout 2', 'Layout 2'], ['Layout 2', 'Layout 2'], ['Layout 2', 'Layout 2']]
+snap-assistant-animation-time=uint32 50
+tile-preview-animation-time=uint32 50
+tiling-system-activation-key=['2']
