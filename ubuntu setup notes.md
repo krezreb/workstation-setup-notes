@@ -6,7 +6,7 @@
 ## Basics / common tools
 
 ```
-apt install tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs vmtouch
+apt install tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq
 apt install gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese
 # bye bye gnu nano
 apt remove nano firefox libreoffice
@@ -21,12 +21,11 @@ https://flolu.de/blog/encrypted-git-repository
 
 ## Other 3rd party apps
 - syncthing https://apt.syncthing.net/
-- keybase
-- code - use github for settings sync
+- code - https://code.visualstudio.com/download use github for settings sync
 - signal
 - virtualbox
-- dbeaver
-- zed
+- dbeaver - https://dbeaver.io/download/
+- zed 
 - gitlab cli https://github.com/profclems/glab/releases
 - obs-studio for screenrecordings https://obsproject.com/download
 - shotcut for video editing
@@ -52,6 +51,10 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 ## pip stuff
 `pip3 install --user azure-cli botocore fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
 
+## aws stuff
+
+`snap install aws-cli --classic`
+
 
 ## gnome stuff
 - multitasking
@@ -72,47 +75,26 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 - run_keybase
 
 ### gnome shell extensions
+
+Ubuntu 24+
+
 `apt-get install gnome-browser-connector gnome-shell-extension-prefs`
+
+Ubuntu 22
+
+`apt-get install chrome-gnome-shell gnome-shell-extension-prefs`
 
 - https://extensions.gnome.org/extension/906/sound-output-device-chooser/
 - https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
 
 ### tiling assistant
-~~- https://extensions.gnome.org/extension/3733/tiling-assistant/~~ comes with ubuntu out of the box now, but not as good as:
+
 - https://extensions.gnome.org/extension/7065/tiling-shell/
-
-col layouts:
-
-```
-3 col layout:
-0--0--0.33--1
-0.33--0--0.33--1
-0.66--0--0.33--1
-```
 
 ## mainline kernel
 
 Sometimes you need a more recent kernel for driver support
 https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/
-
-# LAPTOP / POWER SAVING NOTES (Ubuntu 24.04 LTS)
-
-### tlp + tlpui
-https://github.com/d4nj1/TLPUI/blob/master/docs/INSTALL.md#pypi
-
-### disable default gnome power saving cuz it's garbage
-```
-systemctl stop power-profiles-daemon
-systemctl disable power-profiles-daemon
-systemctl mask power-profiles-daemon
-```
-
-## install laptop tools
-`apt install laptop-mode-tools powertop tlp tlp-gui`
-
-# LAPTOP / POWER SAVING NOTES (Ubuntu 24.10)
-
-Leave power-profiles-daemon in place, do not use tlp and powertop
 
 
 ## games
