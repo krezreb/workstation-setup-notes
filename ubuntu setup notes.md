@@ -14,6 +14,22 @@ snap install brave libreoffice firefox
 snap install sublime-text --classic
 ```
 
+## wireguard for ubuntu 22.04
+
+`apt install resolvconf wireguard`
+
+save wg conf to /etc/wireguard/<name>.conf
+
+Bring up interface
+
+`wg-quick up <name>`
+
+Turn off
+
+`wg-quick down <name>`
+
+
+
 ## remote encrypted git 
 
 https://flolu.de/blog/encrypted-git-repository
@@ -97,11 +113,6 @@ Sometimes you need a more recent kernel for driver support
 https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/
 
 
-## games
-
-tuxtype pingus hedgewars
-
-
 ## vscode python debugger `launch.json` snippet
 
 ```
@@ -127,6 +138,16 @@ tuxtype pingus hedgewars
             "cwd": "path/to/dir",
             # or using a venv
             "python": "${fileDirname}/venv/bin/python",
+        },
+        {
+            "name": "Python debugpy",
+            "type": "debugpy",
+            "request": "attach",
+            "connect": {
+                "host": "localhost",
+                "port": 5678
+            }
         }
+
         ...
 ```
