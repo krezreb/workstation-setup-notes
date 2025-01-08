@@ -9,7 +9,7 @@
 apt install tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq
 apt install gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese
 # bye bye gnu nano
-apt remove nano firefox libreoffice
+apt remove nano firefox libreoffice totem*
 snap install brave libreoffice firefox
 snap install sublime-text --classic
 ```
