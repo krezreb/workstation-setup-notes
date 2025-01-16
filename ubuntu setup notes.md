@@ -14,6 +14,10 @@ snap install brave libreoffice firefox
 snap install sublime-text --classic
 ```
 
+# brave
+
+`curl -fsS https://dl.brave.com/install.sh | sh`
+
 ## wireguard for ubuntu 22.04
 
 `apt install resolvconf wireguard`
@@ -70,6 +74,11 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 ## aws stuff
 
 `snap install aws-cli --classic`
+
+### ssm plugin
+
+https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-debian-and-ubuntu.html
+`curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"`
 
 
 ## gnome stuff
