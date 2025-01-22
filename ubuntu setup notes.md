@@ -6,10 +6,11 @@
 ## Basics / common tools
 
 ```
-apt install tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq
-apt install gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese
+apt install -y \
+tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq \
+gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese obs-studio
 # bye bye gnu nano
-apt remove nano firefox libreoffice totem*
+apt remove nano totem*
 snap install brave libreoffice firefox
 snap install sublime-text --classic
 ```
@@ -69,7 +70,7 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 `apt install python3-pyfuse3 python3-pip python3-venv`
 
 ## pip stuff
-`pip3 install --user azure-cli botocore fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
+`pip3 install --user  boto3 fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
 
 ## aws stuff
 
