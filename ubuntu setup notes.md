@@ -81,6 +81,26 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 https://docs.aws.amazon.com/systems-manager/latest/userguide/install-plugin-debian-and-ubuntu.html
 `curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"`
 
+## docker
+
+```
+ for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done
+```
+
+```
+curl -fsSL https://get.docker.com -o get-docker.sh
+sh ./get-docker.sh --dry-run
+```
+
+Add user to docker group
+
+`usermod -a -G docker <user>`
+
+## ddev
+
+https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/
+
+`curl -fsSL https://ddev.com/install.sh | bash`
 
 ## gnome stuff
 - multitasking
