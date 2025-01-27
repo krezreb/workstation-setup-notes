@@ -59,13 +59,17 @@ alias pep8_autofix='autopep8 . --recursive --in-place --pep8-passes 2000'
 # alias sshfs-jumi2-Julia="sshfs jumi2:/home/julia ~/jumi2_Julia -f -o cache=yes -o kernel_cache"
 
 # git
-alias gitpull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
 alias gadd="git add -p"
 alias gpush="git push"
 alias gpull="git pull"
-alias gpull_submodules="git submodule update --recursive --remote"
+alias gpull_recursive="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
 alias gstat="git status"
 alias gbr="git branch"
+
+# git submodule aliases
+alias gsubm_update="git submodule update --recursive --remote"
+alias gsubm_sync="git submodule sync"
+
 alias gresethard="git reset --hard"
 function gcomm() { git commit --message "$1"; }
 

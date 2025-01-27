@@ -7,7 +7,7 @@
 
 ```
 apt install -y \
-tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq \
+tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  net-tools gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq \
 gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese obs-studio
 # bye bye gnu nano
 apt remove nano totem*
@@ -69,7 +69,7 @@ gsettings set org.gnome.desktop.background show-desktop-icons false
 
 `apt install python3-pyfuse3 python3-pip python3-venv`
 
-## pip stuff
+### pip stuff
 `pip3 install --user  boto3 fuzzywuzzy  exif   deemix   sshuttle  requests  PyYAML  pytest  pyhcl pyaml`
 
 ## aws stuff
@@ -96,11 +96,6 @@ Add user to docker group
 
 `usermod -a -G docker <user>`
 
-## ddev
-
-https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/
-
-`curl -fsSL https://ddev.com/install.sh | bash`
 
 ## gnome stuff
 - multitasking
@@ -141,6 +136,20 @@ Ubuntu 22
 
 Sometimes you need a more recent kernel for driver support
 https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/
+
+
+## disable ip6 in grub
+
+https://www.techrepublic.com/article/how-to-disable-ipv6-through-grub-in-linux/
+
+`vim  /etc/default/grub`
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet ipv6.disable=1  splash"
+GRUB_CMDLINE_LINUX="ipv6.disable=1"
+```
+
+`sudo update-grub`
 
 
 ## vscode python debugger `launch.json` snippet
