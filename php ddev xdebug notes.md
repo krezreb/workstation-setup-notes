@@ -3,7 +3,7 @@
 
 ## php
 
-`apt install php-cli php-pear php-xdebug`
+`apt install php-cli php-pear php-xdebug php-codesniffer`
 
 
 ## ddev

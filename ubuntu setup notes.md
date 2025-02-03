@@ -7,7 +7,7 @@
 
 ```
 apt install -y \
-tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv  net-tools gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq \
+tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv nmap net-tools gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq \
 gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese obs-studio
 # bye bye gnu nano
 apt remove nano totem*
