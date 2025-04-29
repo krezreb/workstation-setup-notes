@@ -35,7 +35,7 @@ Turn off
 
 
 
-## remote encrypted git 
+## remote encrypted git
 
 https://flolu.de/blog/encrypted-git-repository
 
@@ -46,7 +46,7 @@ https://flolu.de/blog/encrypted-git-repository
 - signal
 - virtualbox
 - dbeaver - https://dbeaver.io/download/
-- zed 
+- zed
 - gitlab cli https://github.com/profclems/glab/releases
 - obs-studio for screenrecordings https://obsproject.com/download
 - shotcut for video editing
@@ -121,16 +121,14 @@ Ubuntu 24+
 
 `apt-get install gnome-browser-connector gnome-shell-extension-prefs`
 
-Ubuntu 22
-
-`apt-get install chrome-gnome-shell gnome-shell-extension-prefs`
-
-- https://extensions.gnome.org/extension/906/sound-output-device-chooser/
-- https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/
-
-### tiling assistant
-
 - https://extensions.gnome.org/extension/7065/tiling-shell/
+- https://extensions.gnome.org/extension/5021/activate-window-by-title/
+
+#### using activate-window-by-title
+
+slack:
+
+`gdbus call --session     --dest org.gnome.Shell     --object-path /de/lucaswerkmeister/ActivateWindowByTitle     --method de.lucaswerkmeister.ActivateWindowByTitle.activateBySubstring Slack`
 
 ## mainline kernel
 
