@@ -7,7 +7,7 @@
 
 ```
 apt install -y \
-tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv nmap net-tools gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq \
+tilix ack borgbackup  fuse3 vlc vlc-plugin-samba ack vim direnv nmap net-tools gnome-tweaks git make curl linux-tools-generic htop ncdu xsane xfsprogs jq tmux \
 gimp krita inkscape zim meld evolution nemo gnome-firmware solaar cheese obs-studio
 # bye bye gnu nano
 apt remove nano totem*
@@ -33,12 +33,9 @@ Turn off
 
 `wg-quick down <name>`
 
-
-
 ## remote encrypted git
 
 https://flolu.de/blog/encrypted-git-repository
-
 
 ## Other 3rd party apps
 - syncthing https://apt.syncthing.net/
@@ -108,8 +105,25 @@ Add user to docker group
 - **alt tab shows icons not mini windows:** settings -> keyboard -> view and customize shortcuts -> switch applications = alt-tab
 
 ## keyboard stuff in tweaks -> keyboard -> additional layout options
-- capslock behavior ->  disable caps lock
 - compatibility options -> numlock always enters digits as in macos
+
+## remap capslock to tmux's C-b
+
+```
+sudo add-apt-repository ppa:keyd-team/ppa
+apt install keyd
+```
+
+`vim /etc/keyd/default.conf`
+
+```
+[ids]
+*
+[main]
+capslock = macro(C-b)
+```
+
+`systemctl enable keyd --now`
 
 ## auto start stuff
 - /usr/bin/syncthing serve --no-browser
