@@ -11,9 +11,8 @@ while true; do
   VENDOR=0483
   SUBDEVICE=005
   VIDPID=$(lsusb | grep $VENDOR | grep -i keypad | awk '{print $6}')
-  path=$(udevadm info -q path -n /dev/hidraw* | sort | grep ${VIDPID} | head -n3 | tail -n 1)
-
-  cat /dev/hidraw${path: -1} > /dev/null || sleep 5
+  path=$(udevadm info -q path -n /dev/hidraw* | sort | grep ${VIDPID} | head -n3 | tail -n 1 | awk -F'/' '{print $NF}')
+  cat /dev/${path} > /dev/null || sleep 5
 
 done
 ```
