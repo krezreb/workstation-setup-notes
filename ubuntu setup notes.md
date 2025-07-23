@@ -48,6 +48,10 @@ https://flolu.de/blog/encrypted-git-repository
 - obs-studio for screenrecordings https://obsproject.com/download
 - shotcut for video editing
 
+## disable annoying printer discovery
+
+`systemctl stop cups-browsed`
+`systemctl disable cups-browsed`
 
 ## wireguard vpn client setup
 ssh into pi5-bastion, grab conf using \
