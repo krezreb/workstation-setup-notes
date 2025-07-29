@@ -47,6 +47,49 @@ alias l='ls -CF'
 # python
 alias pep8_check='pep8   --first .'
 alias pep8_autofix='autopep8 . --recursive --in-place --pep8-passes 2000'
+# Usage: debug_wrap my.module [arg1 arg2 …]
+#
+function debugpy_wrap() {
+  local port=5678
+
+  # cleanup possible leftovers
+  pid=$(netstat -ntlp | grep ${port} | awk '{print $7}' | cut -d"/" -f1)
+  if [ ! -z $pid ]; then
+      kill -9 $pid
+  fi
+
+  # start debugpy in the background
+  python3 -m debugpy --listen "${port}" --wait-for-client -m "$@" &
+  dbg_pid=$!
+  echo "🔍 debugpy listening on port ${port} (PID ${dbg_pid})"
+  sleep 0.5
+  # get pid of instance that listens
+  lpid=$(lsof -iTCP:${port} | grep python3 | tail -n 1 | awk '{print $2}')
+
+  # wait until the client attaches
+   printf "⏳ waiting for client to connect"
+   until lsof -iTCP:"${port}" -sTCP:ESTABLISHED &>/dev/null; do
+     printf "."
+     sleep 0.5
+   done
+   echo " connected!"
+
+   # now wait for dbg_pid to terminate
+   printf "⏳ waiting for client to disconnect"
+
+   while ps aux | grep ${dbg_pid} | grep -v grep &>/dev/null; do
+       printf "."
+       sleep 0.5
+   done
+echo " disconnected!"
+
+  # kill debugpy
+  echo "💥 killing debugpy (PID ${lpid})"
+  kill -9 "${lpid}"
+}
+
+# Example:
+#   debug_wrap your.module arg1 arg2
 
 
 # alias sshuttle-jumidev='sshuttle -H jumiserv1-jump 192.168.1.0/24'
