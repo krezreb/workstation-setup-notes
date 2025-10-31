@@ -31,15 +31,32 @@ https://ddev.readthedocs.io/en/stable/users/install/ddev-installation/
         },{
 ```
 
+## zed xdebug debugger `debug.json` snippet
+
+```
+{
+      "label": "Xdebug in DDEV",
+      "adapter": "Xdebug",
+      "request": "launch",
+      "port": 9003,
+      "pathMappings": {
+        "/var/www/html": "/path/to/dir",
+        "/var/www/html/plugins/dir": "/path/to/dir/2"
+      }
+    }
+```
 
 Using dev and xdebug
-
 
 ```
 ddev config
 ddev start
 ddev xdebug enable # gotta rerun this on every start
 ```
+
+cli command debugging
+
+`ddev exec XDEBUG_TRIGGER=1 php ...`
 
 Launch debugger in vscode.
 
