@@ -64,3 +64,15 @@ References:
 
 - https://ddev.readthedocs.io/en/latest/users/debugging-profiling/step-debugging/
 - https://stackoverflow.com/questions/49582866/setting-up-vscode-with-xdebug-pathmapping
+
+
+# phpcs / costing standards setup for matomo
+
+```
+composer config repositories.matomo-cs vcs https://github.com/matomo-org/matomo-coding-standards
+
+composer require --dev matomo-org/matomo-coding-standards:dev-master   squizlabs/php_codesniffer:^3 slevomat/coding-standard:^8   dealerdirect/phpcodesniffer-composer-installer:^1
+
+vendor/bin/phpcs -i
+vendor/bin/phpcbf .
+```
