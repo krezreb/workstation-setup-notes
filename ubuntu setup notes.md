@@ -37,6 +37,21 @@ Turn off
 
 https://flolu.de/blog/encrypted-git-repository
 
+## nice git
+
+If tons and tons of `git` processes get spawned, (say, by an IDE) limit their ability to swamp your OS
+
+`vim ~/.local/bin/git`
+
+```
+#!/usr/bin/env bash
+exec ionice -c2 -n7 nice -n 10 /usr/bin/git "$@"
+```
+
+`chmod +x ~/.local/bin/git`
+
+Then make sure that ~/.local/bin is in PATH before /usr/bin
+
 ## Other 3rd party apps
 - syncthing https://apt.syncthing.net/
 - code - https://code.visualstudio.com/download use github for settings sync
