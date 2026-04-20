@@ -17,3 +17,10 @@ reg add HKLM\System\CurrentControlSet\Control\Power /v PlatformAoAcOverride /t R
 - chrome
 - rustdesk
 - libreoffice
+
+## mounting webdav
+
+
+- rclone
+- rclone browser
+- winfsp for mounting drive as fuse
