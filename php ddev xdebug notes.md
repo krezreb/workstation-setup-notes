@@ -69,10 +69,22 @@ References:
 # phpcs / costing standards setup for matomo
 
 ```
-composer config repositories.matomo-cs vcs https://github.com/matomo-org/matomo-coding-standards
+composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+composer global config repositories.matomo-cs vcs https://github.com/matomo-org/matomo-coding-standards.git
 
-composer require --dev matomo-org/matomo-coding-standards:dev-master   squizlabs/php_codesniffer:^3 slevomat/coding-standard:^8   dealerdirect/phpcodesniffer-composer-installer:^1
+composer global require --dev \
+  squizlabs/php_codesniffer:'~3.10' \
+  slevomat/coding-standard:'~8.14.0' \
+  phpstan/phpdoc-parser:'~1.24.0' \
+  dealerdirect/phpcodesniffer-composer-installer:^1 \
+  matomo-org/matomo-coding-standards:'dev-master'
+
+# then add an alias
+
+alias phpcbf="~/.config/composer/vendor/bin/phpcbf"
+alias phpcs="~/.config/composer/vendor/bin/phpcs"
+
 
 vendor/bin/phpcs -i
-vendor/bin/phpcbf .
+phpcbf .
 ```
