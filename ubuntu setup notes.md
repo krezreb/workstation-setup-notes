@@ -126,6 +126,38 @@ Add user to docker group
 ## keyboard stuff in tweaks -> keyboard -> additional layout options
 - compatibility options -> numlock always enters digits as in macos
 
+## tmux resurrect
+
+
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+
+Add this near the bottom of ~/.tmux.conf:
+
+```
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+
+# Keep this at the bottom
+run '~/.tmux/plugins/tpm/tpm'
+```
+
+Reload tmux:
+
+`tmux source-file ~/.tmux.conf`
+
+Then inside tmux, to install plugins:
+
+`prefix + I`
+
+From anywhere inside tmux, to save current sessions:
+
+`prefix + Ctrl-s`
+
+Then restore:
+
+`prefix + Ctrl-r`
+
 ## remap capslock to tmux's C-b
 
 ```
