@@ -59,7 +59,7 @@ function debugpy_wrap() {
   fi
 
   # start debugpy in the background
-  python3 -m debugpy --listen "${port}" --wait-for-client -m "$@" &
+  python3 -m debugpy --listen "${port}" --wait-for-client "$@" &
   dbg_pid=$!
   echo "🔍 debugpy listening on port ${port} (PID ${dbg_pid})"
   sleep 0.5
